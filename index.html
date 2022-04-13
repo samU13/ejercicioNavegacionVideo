@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>mStilo</title>
+</head>
+
+<body>
+
+    <div class="main-grid">
+        <div>
+            <p class="logo">mStilo</p>
+            <p class="texto-sub">copyright here 2022</p>
+        </div>
+        <div class="stack">
+            <header class="flex-row justify-content-sb">
+                <button aria-controls="nav-grid" aria-expanded="false" class="menu-toggle">Menu</button>
+                <nav class="primary-nav">
+                    <ul class="nav-list flex-row" style="--gap:3rem">
+                        <li>Idea</li>
+                        <li>Ropa</li>
+                        <li>Accesorios</li>
+                        <li>Tatuajes</li>
+                    </ul>
+                </nav>
+            </header>
+            <div id='nav-grid' class="nav-grid grid-even-columns align-content-center closed">
+                <div>
+                    <h3>Ideas</h3>
+                    <ul>
+                        <li>Imagen</li>
+                        <li>Audio</li>
+                        <li>Fotos</li>
+                        <li>Lugares</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>ROPA</h3>
+                    <ul>
+                        <li>Sudaderas</li>
+                        <li>Chaquetas</li>
+                        <li>Pantalones</li>
+                        <li>Otros</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>ACCESORIOS</h3>
+                    <ul>
+                        <li>Gorras</li>
+                        <li>Sombreros</li>
+                        <li>Anillos</li>
+                        <li>Otros</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>TATUAJES</h3>
+                    <ul>
+                        <li>Cuello</li>
+                        <li>Brazos</li>
+                        <li>Piernas</li>
+                        <li>Otros</li>
+                    </ul>
+                </div>
+            
+
+            </div>
+            
+            <div class="content-grid align-content-center">
+               
+                <main class="grid-70-30">
+                    <div>
+                        <h1>Look at the Club Lights - Brightside</h1>
+                        
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quam nostrum sit sapiente
+                            pariatur
+                            impedit corporis eos repellat! Unde autem voluptatum, quod debitis non optio aliquid
+                            laudantium
+                            corrupti eligendi harum?</p>
+                        <a class="button" href="#">MANDAR IDEAS</a>
+                    </div>
+                </main>
+                
+            
+            </div>
+
+            <footer>Socila links</footer>
+
+            <div class="content-grid-bg">
+            </div>
+            <div class="nav-grid-bg"></div>
+            <div class="video-bg">
+                <video src="videoclip.mp4"muted loop autoplay></video>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const menuTogggle = document.querySelector('.menu-toggle');
+        const mainGrid =document.querySelector('.main-grid');
+
+        menuTogggle.addEventListener('click',()=>{
+            mainGrid.toggleAttribute('data-big-nav-open')
+            const menuState=menuTogggle.getAttribute('aria-expanded');
+            if(menuState=='false'){
+                menuTogggle.setAttribute('aria-expanded', true)
+            }else{
+                menuTogggle.setAttribute('aria-expanded', false)
+            }
+            console.log(menuTogggle);
+        });
+    </script>
+
+</body>
+
+</html>
