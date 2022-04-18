@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d1fcab2f03.js" crossorigin="anonymous"></script>
     <title>mStilo</title>
 </head>
 
@@ -17,14 +18,14 @@
 
     <div class="main-grid">
         <div>
-            <p class="logo">mStilo</p>
+            <p class="logo">m<span>St</span>ilo</p>
             <p class="texto-sub">copyright here 2022</p>
         </div>
         <div class="stack">
             <header class="flex-row justify-content-sb">
-                <button aria-controls="nav-grid" aria-expanded="false" class="menu-toggle">Menu</button>
+                <i id="menlo" aria-controls="nav-grid" aria-expanded="false" class="fa-solid fa-bars fa-xl menu-toggle"></i>
                 <nav class="primary-nav">
-                    <ul class="nav-list flex-row" style="--gap:3rem">
+                    <ul id="menli" class="nav-list flex-row" style="--gap:3rem">
                         <li>Idea</li>
                         <li>Ropa</li>
                         <li>Accesorios</li>
@@ -93,7 +94,13 @@
             
             </div>
 
-            <footer>Socila links</footer>
+            <footer>
+                <p id="social" class="social--icons">
+                    <i class="fa-brands fa-facebook fa-xl"></i>
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                    <i class="fa-brands fa-twitter fa-xl"></i>
+                </p>
+            </footer>
 
             <div class="content-grid-bg">
             </div>
@@ -105,6 +112,7 @@
     </div>
 
     <script>
+     
         const menuTogggle = document.querySelector('.menu-toggle');
         const mainGrid =document.querySelector('.main-grid');
 
@@ -113,8 +121,14 @@
             const menuState=menuTogggle.getAttribute('aria-expanded');
             if(menuState=='false'){
                 menuTogggle.setAttribute('aria-expanded', true)
+                document.getElementById("menli").setAttribute("style", "color:#955a99;"); 
+                document.getElementById("menlo").setAttribute("style", "color:#955a99;"); 
+                document.getElementById("social").setAttribute("style", "color:#955a99;"); 
             }else{
                 menuTogggle.setAttribute('aria-expanded', false)
+                document.getElementById("menli").setAttribute("style", "color:white;");
+                document.getElementById("menlo").setAttribute("style", "color:white;");
+                document.getElementById("social").setAttribute("style", "color:white;"); 
             }
             console.log(menuTogggle);
         });

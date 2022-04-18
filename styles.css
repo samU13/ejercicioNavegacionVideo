@@ -48,7 +48,12 @@ h1 {
 
 h3{
     font-size:var(--font-size-600);
+    font-weight:400;
     padding-left: 2rem;
+}
+
+.logo>span{
+    color: var(--clr-primary-400);
 }
 
 .flex-row {
@@ -89,17 +94,20 @@ h3{
 .stack header {
     align-self: start;
     z-index: 100;
+    color: var(--clr-neutral-100);
 }
 
 .stack footer {
     align-self: end;
     z-index: 100;
+    color: var(--clr-neutral-100);
 }
 
 
 .nav-list {
     list-style: none;
     font-weight: 700;
+
 }
 
 .logo {
@@ -219,6 +227,8 @@ h3{
 
 }
 
+
+
 .video-bg {
     z-index: -3;
 }
@@ -229,3 +239,9 @@ h3{
     object-fit: cover;
     opacity: 0.4;
 }
+
+
+.stackedwhite{
+    color: var(--clr-neutral-100);
+}
+
