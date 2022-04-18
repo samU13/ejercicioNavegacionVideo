@@ -112,12 +112,14 @@ h3{
     align-self: start;
     z-index: 100;
     color: var(--clr-neutral-100);
+    cursor: pointer;
 }
 
 .stack footer {
     align-self: end;
     z-index: 100;
     color: var(--clr-neutral-100);
+    cursor: pointer;
 }
 
 
@@ -257,6 +259,9 @@ h3{
     opacity: 0.4;
 }
 
+.social--icons>*{
+    padding: .5em;
+}
 
 .stackedwhite{
     color: var(--clr-neutral-100);
