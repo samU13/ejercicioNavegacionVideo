@@ -56,6 +56,23 @@ h3{
     color: var(--clr-primary-400);
 }
 
+.btn{
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    padding: .25em 1em;
+    font-weight: var(--fw-bold);
+    margin-top: 0.75em;
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-primary-400);
+}
+.btn:hover{
+    color: var(--clr-neutral-100);
+    background-color: rgba(255, 255, 255, 0.001);
+}
+
 .flex-row {
     display: flex;
     gap: var(--gap, var(--space-4));
